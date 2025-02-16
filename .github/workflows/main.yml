@@ -3,7 +3,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -38,5 +38,4 @@ jobs:
           path: |
             build/*.exe
             build/*.bin
-            build/*.app/**/*
           include-hidden-files: true
