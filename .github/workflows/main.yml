@@ -21,6 +21,8 @@ jobs:
           nuitka-version: main
           script-name: mon_v2.py
           mode: standalone
+          mode: onefile
+          include-package: requests
 
       # Uploads artifact
       - name: Upload Artifact
