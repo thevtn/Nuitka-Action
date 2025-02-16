@@ -172,7 +172,7 @@ while True:
         b_int, b_b_int, b_p_int = b, b_b, b_p
         os.chdir("..")
         
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
    
     print(Fore.WHITE + f"{volume}{trafficTypeVisual} " + f"за {str(cost).replace('.0', '')} ₽")
     print(Fore.YELLOW + 'Выставлено лотов: ' + str(s) + '. Ботами: ' + str(s_b) + '. Продавцами: ' + str(s_p))
