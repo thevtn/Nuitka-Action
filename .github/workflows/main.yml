@@ -30,6 +30,7 @@ jobs:
           nuitka-version: main
           script-name: mon_v2.py
           mode: app
+          include-package: requests, urllib3
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
