@@ -22,9 +22,8 @@ r_r = 1
 if not os.path.exists('config.ini'):
     open('config.ini', 'w').close()
     print(Fore.YELLOW + 'Файл config.ini не найден, будет создан новый с параметрами по умолчанию.')
-    with open("config.ini", "w") as f:
+    with open("config.ini", "w", encoding="utf8") as f:
         f.write("[Settings]\n# useconf - использовать конфиг? (y/n)\n# interval - интервал записи итогов логов (в минутах)\n# delay - частота обновления данных (в секундах)\n# delete - удалять прошлый лог перед запуском? (y/n)\nuseconf = y\ninterval = 10\ndelay = 5\ndelete = n\nmincost = y\n\n# startnow - не спрашивать ничего, сразу запускать скрипт по всем имеющимся параметрам (y/N)\n# параметры ниже используются только, если startnow = y\n# trafficType - (1-ГБ, 2-минуты, 3-SMS)\n# volume - кол-во ГБ/минут/SMS\n# mincost - Минималка? (y/n)\n# cost - Цена (используется если, mincost = n)\n[StartNow]\nstartnow = n\ntrafficType = 1\nvolume = 1\nmincost = n\ncost = 15")
-    raise SystemExit
 if not os.path.exists("stats"):
     os.mkdir("stats")
 if not os.path.exists("sales"):
