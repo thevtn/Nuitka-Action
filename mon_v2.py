@@ -8,7 +8,7 @@ from requests.exceptions import ConnectionError
 from json import JSONDecodeError
 from configparser import ConfigParser
 config = ConfigParser()
-config.read('config.ini')   
+config.read('config.ini', encoding="utf8")   
 init(autoreset=True)
 start_time = time.time()
 headers = {"user-agent": "Mozilla/5.0 (Linux; Android 13; Redmi Note 10S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36"}
